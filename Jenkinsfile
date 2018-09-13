@@ -9,7 +9,7 @@ pipeline {
                 sh 'mvn clean package'
                 sh 'whoami'
                 sh 'echo $PATH'
-                sh "sudo /usr/local/bin/docker build . -t tomcatwebapp:${env.BUILD_ID}"
+                sh "/usr/local/bin/docker build . -t tomcatwebapp:${env.BUILD_ID}"
         
             }
         }
